@@ -1,0 +1,66 @@
+.parties {
+    /* POSIZIONAMENTO */
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    /* DISPLAY DEI CONTENUTI */
+    display: flex;
+    flex-direction: column;
+
+    /* MARGINI E PADDING */
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 10px;
+
+    /* STILE GRAFICO DEL BOX */
+    border: 2px solid #6C6C6C;
+    border-radius: 25px;
+}
+
+/* Scrivete voi le regole di stile per i contenuti
+del box: titolo H2, lista UL, elementi della lista LI... */
+
+/* Attenzione: le regole devono applicarsi
+solo all'interno del box "parties"
+ */
+
+/* La classe "pulsante" ha già lo stile corretto assegnato
+nel foglio "main-style.css". Bisogna configurare però
+il layout del blocco "partiesactions"
+in modo che il pulsante appaia tutto a destra
+ */
+
+.parties h2 {
+    margin: 0;
+    color: #3B0E7B;
+    font-size: 1.3em;
+}
+
+.parties ul{
+    padding: 0px;
+    margin: 10px 0px;
+}
+.parties li{
+    list-style: none;
+    padding: 10px;
+    margin: 5px 0px;
+
+    border: solid black 1px;
+    background-color: #EBE1FC;
+}
+
+.parties li.selected{
+    background-color: #9BE8EA;
+}
+
+.parties li:hover:not(.selected){
+    background-color: #CDE0F6;
+}
+
+.partiesactions {
+    margin-left: auto;
+    width: fit-content;
+}

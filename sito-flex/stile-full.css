@@ -1,0 +1,268 @@
+
+html {
+    background-color: #1f0013;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0px;
+}
+
+div.persone {
+    display: flex;
+}
+
+div.articoli {
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.articolo{
+    overflow: scroll;
+}
+
+.scelta-progetti > div {
+    display: flex;
+}
+
+section.principale {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.persone{
+    height: fit-content;
+}
+
+.gestione-progetto {
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: hidden;
+}
+
+.gestione-progetto > div {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    height: 100%;
+}
+
+
+
+
+
+
+h1, h2 {
+    margin: 5px 0px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1 {
+    color: rgba(199,21,133,0.8);
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: rgb(107, 0, 41);
+}
+
+
+nav.menu {
+    background-color: rgba(255,255,255,0.6);
+    margin: 10px 25px;
+    padding: 10px;
+}
+
+nav.menu li {
+    display: block;
+    margin: 0px;
+    margin-bottom: 2px;
+    padding: 5px;
+    background-color: rgba(211, 211, 211, 0.53);
+}
+
+nav.menu li:hover {
+    background-color: yellow;
+}
+
+nav.menu ul {
+    padding: 0px;
+}
+
+.persone {
+    margin: 10px 25px;
+}
+
+.articolo {
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid mediumvioletred;
+    background-color: lightgray;
+    margin: 5px 25px;
+}
+
+p:nth-child(2) {
+    color: teal;
+}
+
+p:last-child {
+    color: mediumvioletred;
+}
+
+ul {
+    margin: 0px;
+}
+
+li:hover {
+    background-color: yellow;
+}
+
+li:hover ~ li {
+    background-color: hotpink;
+}
+
+li:hover + li {
+    background-color: greenyellow;
+}
+
+.scelta-progetti {
+    background-color: rgba(255,255,255,0.6);
+    margin: 10px 25px;
+    padding: 10px;
+    max-height: 150px;
+    height: 150px;
+}
+
+.scelta-progetti > div > div {
+    width: 150px;
+    height: 80px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px dashed darkslategrey;
+    background-color: rgba(135, 206, 250, 0.36);
+}
+
+.scelta-progetti > div > div.selected {
+    background-color: lightskyblue;
+    border: 2px solid darkslategrey;
+}
+
+
+/*
+html {
+    background-color: #1f0013;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+}
+
+body{
+    max-height: 100vh;
+    height: 100vh;
+}
+
+.gestione-progetto{
+    display: flex;
+    flex-direction: row;
+    max-height: 100%;
+}
+
+.principale{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.articolo {
+    overflow: scroll;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.persone{
+    display: flex;
+    flex-direction: row;
+}
+
+fit{height: fit-content;}
+
+h1, h2 {
+    margin: 5px 0px;
+}
+
+h1 {
+    color: rgba(199,21,133,0.8);
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: rgb(107, 0, 41);
+}
+
+
+nav.menu {
+    background-color: rgba(255,255,255,0.6);
+    margin: 10px 25px;
+    padding: 10px;
+}
+
+.persone {
+    margin: 10px 25px;
+}
+
+.articolo {
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid mediumvioletred;
+    background-color: lightgray;
+    margin: 5px 25px;
+}
+
+p:nth-child(2) {
+    color: teal;
+}
+
+p:last-child {
+    color: mediumvioletred;
+}
+
+ul {
+    margin: 0px;
+}
+
+li:hover {
+    background-color: yellow;
+}
+
+li:hover ~ li {
+    background-color: hotpink;
+}
+
+li:hover + li {
+    background-color: greenyellow;
+}
+
+.scelta-progetti {
+    background-color: rgba(255,255,255,0.6);
+    margin: 10px 25px;
+    padding: 10px;
+}
+
+.scelta-progetti > div.selected {
+    background-color: lightskyblue;
+}
+*/
