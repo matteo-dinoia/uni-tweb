@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input, label, h1, h2{
+    display: block;
+}
+
+input{
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.btn{
+    width: fit-content;
+    margin: 10px auto;
+    font-size: larger;
+}
+
+.error{
+    background: rgba(255, 0, 0, 0.5);
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: larger;
+    font-weight: bolder;
+}

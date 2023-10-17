@@ -1,0 +1,60 @@
+.parties {
+    /* POSIZIONAMENTO */
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    /* DISPLAY DEI CONTENUTI */
+    display: flex;
+    flex-direction: column;
+
+    /* MARGINI E PADDING */
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 10px;
+
+    /* STILE GRAFICO DEL BOX */
+    border: 2px solid #6C6C6C;
+    border-radius: 25px;
+}
+
+.partiesactions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.parties > h2 {
+    color: #3B0E7B;
+    margin: 0px;
+    font-size: 1.3rem;
+}
+
+.parties > ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+
+.parties > ul > li {
+    display: flex;
+    padding: 10px;
+    background-color: #EBE1FC;
+    margin-bottom: 5px;
+    border: 1px solid #BBBBBB;
+}
+
+.parties > ul > li:last-child {
+    margin-bottom: 0px;
+}
+
+.parties > ul > li:hover {
+    background-color: #CDE0F6;
+}
+
+.parties > ul > li.selected,
+.parties > ul > li.selected:hover {
+    background-color: #9BE8EA;
+    border: 1px solid #70BABC;
+}

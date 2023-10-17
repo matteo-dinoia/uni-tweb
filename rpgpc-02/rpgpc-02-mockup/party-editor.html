@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RPG Party Creator</title>
+    <link rel="stylesheet"
+          href="style/main-style.css">
+    <link rel="stylesheet"
+          href="style/parties-style.css">
+    <link rel="stylesheet"
+          href="style/viewparty-style.css">
+    <link rel="stylesheet"
+          href="style/party-editor-style.css">
+</head>
+<body>
+<section class="topbar">
+    <h1>RPG Party Creator</h1>
+    <nav class="topmenu">
+        <div class="actions"><img src="assets/menubars.svg"></div>
+        <div class="user"><img src="assets/user.svg"></div>
+    </nav>
+</section>
+<div class="parties">
+    <h2>Your parties:</h2>
+    <ul>
+        <li>
+            Baba Yaga &amp; Friends
+        </li>
+        <li class="selected">
+            LOTR
+        </li>
+        <li>
+            Quidditch forever
+        </li>
+    </ul>
+    <div class="partiesactions">
+        <div class="pulsante">Add...</div>
+    </div>
+</div>
+<div class="viewparty">
+    <h1 class="partyname">LOTR</h1>
+    <div class="partymembers">
+        <h2>Party members:</h2>
+        <ul>
+            <li class="selected">Aragorn (Ranger, lv.12)</li>
+            <li>Frodo Baggins (Rogue, lv.6)</li>
+            <li>Gandalf (Gray Wizard, lv.11)</li>
+        </ul>
+        <div class="partyedit">
+            <h2>Add member:</h2>
+            <form action="/rpgpc/party/edit/partyname"
+                  method="post">
+                <select name="add_character">
+                    <option value="id1">Character 1</option>
+                    <option value="id2">Character 2</option>
+                    <option value="id3">Character 3</option>
+                </select>
+                <button type="submit">Add</button>
+            </form>
+            <div class="membersactions">
+                <div class="pulsante"><a href="/rpgpc/party/addchar/partyname">Create new</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+</body>
+</html>
