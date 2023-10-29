@@ -74,7 +74,7 @@ public class PartyTemplates {
                 "<body>\n" +
                 topbar +
                 "<div class=\"%s\">".formatted(mainclass) +
-                getViewParties("") + //TODO
+                getViewParties("/party/view") + //TODO
                 "</div>\n" +
                 "</body>\n" +
                 "</html>";

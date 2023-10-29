@@ -1,23 +1,10 @@
 package tweb.rpgpc;
 
 import java.io.*;
-import java.util.Arrays;
-import java.util.Map;
-
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 import tweb.rpgpc.rpg.PartyManager;
 
-/* URL Patterns
-    /party/view --> per il momento mostra delle istruzioni per l'uso
-    /party/view/[nome-party] --> mostra il party [nome-party] senza nessun personaggio selezionato
-    /party/view/[nome-party]?sel=N --> mostra il party da visualizzare selezionando il personaggio con id = N
-    /party/addchar/[nome-party] -->
-        GET mostra il form per aggiungere un nuovo personaggio al party
-        POST invia i dati per l'aggiunta e mostra il party con il nuovo personaggio selezionato
-    se non esiste un party [nome-party], o se in esso non c'è un personaggio con id=N,
-    deve venire generato un errore 404 not found
- */
 @WebServlet(name = "RPGPC-Party-Servlet", urlPatterns = {"/party/view/*", "/party/addchar/*", "/party/edit/*", "/party/new/*"})
 public class RPGPartyServlet extends HttpServlet {
 
@@ -38,7 +25,7 @@ public class RPGPartyServlet extends HttpServlet {
 
         if (servletPath[2].equals("view")) {
             if (pathParts.length == 0) {
-                String[] css = {"viewparty-solo-style.css"};
+                String[] css = {"parties-style.css"};
                 out.println(templates.getDummyPartyPage(css));
             } else if (pathParts.length >= 2) {
                 String[] values = request.getParameterValues("sel");
