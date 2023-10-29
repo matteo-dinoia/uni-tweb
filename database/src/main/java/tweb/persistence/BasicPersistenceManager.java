@@ -25,7 +25,7 @@ public class BasicPersistenceManager implements PersistenceManager {
         try {
             Class.forName("org.postgresql.Driver");
             try (Connection conn = DriverManager.getConnection(url, username, password)) {
-                try(PreparedStatement ps = conn.prepareStatement("DELETE FROM characters WHERE id=?")){
+                try(PreparedStatement ps = conn.prepareStatement("DELETE FROM rpgpc.characters WHERE id=?")){
                     int count = 0;
                     for(int i = 11; i < 13; i++) {
                         ps.setInt(1, i);

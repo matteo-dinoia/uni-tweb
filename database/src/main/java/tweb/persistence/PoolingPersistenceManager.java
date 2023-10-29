@@ -40,7 +40,7 @@ public class PoolingPersistenceManager implements PersistenceManager {
     public String test() {
         StringBuilder builder = new StringBuilder();
         try (Connection conn = dataSource.getConnection();
-             PreparedStatement ps = conn.prepareStatement("SELECT * FROM party");
+             PreparedStatement ps = conn.prepareStatement("SELECT * FROM rpgpc.party");
              ResultSet rs = ps.executeQuery()) {
             while (rs.next()) {
                 String sn = rs.getString("shortname");
