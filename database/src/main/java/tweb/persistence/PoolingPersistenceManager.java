@@ -5,6 +5,7 @@ import com.zaxxer.hikari.HikariDataSource;
 
 import java.sql.*;
 import java.util.Arrays;
+import java.util.Enumeration;
 
 public class PoolingPersistenceManager implements PersistenceManager {
 
@@ -15,6 +16,17 @@ public class PoolingPersistenceManager implements PersistenceManager {
             instance = new PoolingPersistenceManager();
         }
         return instance;
+    }
+
+    public static void cleanup() {
+        if (instance == null) return;
+        try {
+            Enumeration<Driver> d = DriverManager.getDrivers();
+            while (d.hasMoreElements()) DriverManager.deregisterDriver(d.nextElement());
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        instance.dataSource.close();
     }
 
     private HikariDataSource dataSource;
@@ -40,17 +52,18 @@ public class PoolingPersistenceManager implements PersistenceManager {
     public String test() {
         StringBuilder builder = new StringBuilder();
         try (Connection conn = dataSource.getConnection();
-             PreparedStatement ps = conn.prepareStatement("SELECT * FROM rpgpc.party");
+             PreparedStatement ps = conn.prepareStatement("SELECT * FROM party");
              ResultSet rs = ps.executeQuery()) {
             while (rs.next()) {
                 String sn = rs.getString("shortname");
                 String name = rs.getString("name");
                 builder.append("<p><strong>%s</strong> ha shortname <em>%s</em></p>\n"
-                        .formatted(name, sn));            }
+                        .formatted(name, sn));
+            }
             return builder.toString();
         } catch (SQLException ex) {
             builder.append("ERROR");
-            for (StackTraceElement s: ex.getStackTrace()) {
+            for (StackTraceElement s : ex.getStackTrace()) {
                 builder.append(s.toString()).append("<br>");
             }
         }
