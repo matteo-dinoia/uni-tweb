@@ -1,0 +1,97 @@
+section.addchar {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+section.addchar > h2 {
+    color: #3B0E7B;
+    margin: 0px;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+form.addchar {
+    flex-grow: 1;
+    display: grid;
+    grid-template-rows: 40px 40px auto 50px;
+    grid-template-columns: 4fr 1fr;
+}
+
+.addchar label {
+    color: #3B0E7B;
+    font-size: 1.2rem;
+}
+
+.addchar input[type=text], .addchar input[type=number], .addchar textarea {
+    background-color: #f6f4ff;
+    font-size: 1.2rem;
+    border: 1px solid  #3B0E7B;
+    padding: 5px;
+}
+
+.h_formgroup {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: baseline;
+}
+
+.h_formgroup > input {
+    flex-grow: 1;
+}
+
+.h_formgroup.name {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.h_formgroup.rpgclass {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-right: 30px;
+}
+
+.h_formgroup.level {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.v_formgroup {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    align-items: flex-start;
+}
+
+.v_formgroup > input {
+    flex-grow: 1;
+}
+
+.v_formgroup > textarea {
+    flex-grow: 1;
+    align-self: stretch;
+}
+
+.v_formgroup.desc {
+    margin-top: 20px;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.formaction {
+    display: flex;
+    padding-top: 10px;
+}
