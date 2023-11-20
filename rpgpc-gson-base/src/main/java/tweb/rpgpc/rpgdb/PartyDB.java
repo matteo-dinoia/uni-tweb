@@ -140,9 +140,57 @@ public class PartyDB {
                         p.characters.add(rsMembers.getInt("character_id"));
                     }
                 }
+                ret.add(p);
             }
         }
         return ret;
+    }
+
+    public boolean changeFullName(String newFullName, Connection conn) throws SQLException {
+        boolean updated;
+
+        try (PreparedStatement st = conn.prepareStatement("UPDATE party SET name = ? WHERE shortname = ?")) {
+            st.setString(2, shortname);
+            st.setString(1, newFullName);
+            int n = st.executeUpdate();
+            updated = n > 0;
+        }
+        return updated;
+    }
+
+    public boolean addToParty(int characterId, Connection conn) throws SQLException {
+        boolean added;
+
+        try (PreparedStatement st = conn.prepareStatement("INSERT INTO partymembers (party_name, character_id) VALUES (?, ?)")) {
+            st.setString(1, shortname);
+            st.setInt(2, characterId);
+            int n = st.executeUpdate();
+            added = n > 0;
+        }
+        return added;
+    }
+
+    public boolean removeFromParty(int characterId, Connection conn) throws SQLException {
+        boolean deleted;
+
+        try (PreparedStatement st = conn.prepareStatement("DELETE FROM partymembers WHERE party_name = ? AND character_id = ?")) {
+            st.setString(1, shortname);
+            st.setInt(2, characterId);
+            int n = st.executeUpdate();
+            deleted = n > 0;
+        }
+        return deleted;
+    }
+
+    public boolean delete(Connection conn) throws SQLException {
+        boolean deleted;
+
+        try (PreparedStatement st = conn.prepareStatement("DELETE FROM party WHERE shortname = ?")) {
+            st.setString(1, shortname);
+            int n = st.executeUpdate();
+            deleted = n > 0;
+        }
+        return deleted;
     }
 
 }

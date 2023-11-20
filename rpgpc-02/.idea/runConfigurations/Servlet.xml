@@ -6,7 +6,7 @@
     <predefined_log_file id="Tomcat Manager Log" />
     <predefined_log_file id="Tomcat Host Manager Log" />
     <option name="catalinaBase" value="$USER_HOME$/.SmartTomcat/rpgpc-02" />
-    <option name="contextPath" value="/rpgpc-02" />
+    <option name="contextPath" value="/rpgpc" />
     <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
     <option name="envOptions">
       <map />

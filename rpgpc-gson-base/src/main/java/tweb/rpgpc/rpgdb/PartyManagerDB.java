@@ -51,12 +51,22 @@ public class PartyManagerDB {
     }
 
     public PartyDB getParty(String name) {
+        if(name == null) return null;
         PartyDB p = null;
         try (Connection conn = persistence.getConnection()) {
             p = PartyDB.loadParty(name, conn);
         } catch (SQLException ex) {
         }
         return p;
+    }
+
+    public ArrayList<PartyDB> getAllParties() {
+        ArrayList<PartyDB> list = null;
+        try (Connection conn = persistence.getConnection()) {
+            list = PartyDB.loadAllParties(conn);
+        } catch (SQLException ex) {}
+
+        return list;
     }
 
     /* public ArrayList<PartyDB> getParties() {
@@ -140,8 +150,67 @@ public class PartyManagerDB {
         String ret = "";
         try (Connection conn = persistence.getConnection()) {
             ret = p.saveAsNew(conn);
-        } catch (SQLException ex) {
-        }
+        } catch (SQLException ex) {}
+
         return ret;
+    }
+
+    public boolean deleteParty(String shortName) {
+        boolean deleted = false;
+        try (Connection conn = persistence.getConnection()) {
+            PartyDB p = PartyDB.loadParty(shortName, conn);
+            if (p == null)
+                return false;
+            try{
+                conn.setAutoCommit(false);
+                ArrayList<CharacterDB> characters = CharacterDB.loadCharactersInParty(shortName, conn);
+                for(int i = 0; i < characters.size(); i++){
+                    p.removeFromParty(characters.get(i).getId(),conn);
+                }
+                deleted = p.delete(conn);
+                conn.commit();
+            }catch (SQLException ex) {
+                try{
+                    conn.rollback();
+                }catch (SQLException ex2){
+                    ex2.printStackTrace();
+                }
+            }
+        }catch (SQLException ex) {}
+
+        return deleted;
+    }
+
+    public boolean changePartyName(PartyDB p, String newName){
+        if (p == null) return false;
+        boolean res = false;
+
+        try (Connection conn = persistence.getConnection()) {
+                res = p.changeFullName(newName, conn);
+        }catch (SQLException ex) {}
+
+        return res;
+    }
+
+    public boolean removePartyMember(PartyDB p, int id){
+        if (p == null) return false;
+        boolean res = false;
+
+        try (Connection conn = persistence.getConnection()) {
+            res = p.removeFromParty(id, conn);
+        }catch (SQLException ex) {}
+
+        return res;
+    }
+
+    public boolean addPartyMember(PartyDB p, int id){
+        if (p == null) return false;
+        boolean res = false;
+
+        try (Connection conn = persistence.getConnection()) {
+            res = p.addToParty(id, conn);
+        }catch (SQLException ex) {}
+
+        return res;
     }
 }
