@@ -1,4 +1,4 @@
-import { parties, characters } from "./data";
+import { loadParty } from "./generate-data.js";
 
 const doAssociation = (event, listName, callback) => {
     const list = document.getElementsByClassName(listName)[0];
@@ -16,6 +16,7 @@ export function setupSelectionHighlight() {
         for (let li of liElems) {
             if (li === clickedElem) {
                 li.classList.add("selected");
+                loadParty(li.role);
             } else {
                 li.classList.remove("selected");
             }
