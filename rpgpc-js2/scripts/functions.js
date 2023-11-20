@@ -1,3 +1,5 @@
+import { parties, characters } from "./data";
+
 const doAssociation = (event, listName, callback) => {
     const list = document.getElementsByClassName(listName)[0];
     const liElems = list.getElementsByTagName("li");
