@@ -1,0 +1,31 @@
+.modal.addparty {
+    width: 40vw;
+    height: 40vh;
+}
+
+
+div.addparty .modalform {
+    flex-grow: 1;
+    display: grid;
+    grid-template-rows: 90px 120px auto 50px;
+    grid-template-columns: 1fr;
+}
+
+.modalform .name {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.modalform .shortname {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.modalform .formaction {
+    grid-row-start: 4;
+    grid-row-end: 5;
+}

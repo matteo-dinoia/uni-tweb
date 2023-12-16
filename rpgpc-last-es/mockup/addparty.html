@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RPG Party Creator</title>
+    <link rel="stylesheet"
+          href="style/main.css">
+    <link rel="stylesheet"
+          href="style/topbar.css">
+    <link rel="stylesheet"
+          href="style/parties.css">
+    <link rel="stylesheet"
+          href="style/characters.css">
+    <link rel="stylesheet"
+          href="style/viewparty.css">
+    <link rel="stylesheet"
+          href="style/viewparty-partyedit.css">
+    <link rel="stylesheet"
+          href="style/viewparty-chardesc.css">
+    <link rel="stylesheet"
+          href="style/addchar.css">
+    <link rel="stylesheet"
+          href="style/addparty.css">
+</head>
+<body>
+<div id="root">
+
+    <section class="topbar">
+        <h1>RPG Party Creator</h1>
+        <nav class="topmenu">
+            <div class="actions"><img src="assets/menubars.svg"></div>
+            <div class="user"><img src="assets/user.svg"></div>
+        </nav>
+    </section>
+    <div class="parties sidebox">
+        <h2>Your parties:</h2>
+        <ul class="partylist">
+            <li>
+                <span>Baba Yaga &amp; Friends</span>
+            </li>
+            <li class="selected">
+                <span>LOTR</span><img class="editparty"
+                                      src="assets/edit.svg">
+                <img class="deleteparty"
+                     src="assets/remove.svg">
+            </li>
+            <li>
+                <span>Quidditch forever</span>
+            </li>
+        </ul>
+        <div class="partiesactions">
+            <div class="pulsante">New party...</div>
+        </div>
+    </div>
+    <div class="characters sidebox">
+        <h2>Your characters:</h2>
+        <table class="chartable">
+            <tr class="header">
+                <th>Name</th>
+                <th>Class</th>
+                <th>Level</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>Albus Dumbledore</td>
+                <td>Sorcerer</td>
+                <td>99</td>
+                <td><img class="editparty"
+                         src="assets/edit.svg"></td>
+                <td><img class="deleteparty"
+                         src="assets/remove.svg"></td>
+            </tr>
+            <tr>
+                <td>Aragorn</td>
+                <td>Ranger</td>
+                <td>12</td>
+                <td><img class="editparty"
+                         src="assets/edit.svg"></td>
+                <td><img class="deleteparty"
+                         src="assets/remove.svg"></td>
+            </tr>
+            <tr>
+                <td>Baba Yaga</td>
+                <td>Witch</td>
+                <td>102</td>
+                <td><img class="editparty"
+                         src="assets/edit.svg"></td>
+                <td><img class="deleteparty"
+                         src="assets/remove.svg"></td>
+            </tr>
+            <tr>
+                <td>Draco Malfoy</td>
+                <td>Black Wizard</td>
+                <td>3</td>
+                <td><img class="editparty"
+                         src="assets/edit.svg"></td>
+                <td><img class="deleteparty"
+                         src="assets/remove.svg"></td>
+            </tr>
+            <tr>
+                <td>Firebird</td>
+                <td>Creature</td>
+                <td>18</td>
+                <td><img class="editparty"
+                         src="assets/edit.svg"></td>
+                <td><img class="deleteparty"
+                         src="assets/remove.svg"></td>
+            </tr>
+            <tr>
+                <td>Frodo Baggins</td>
+                <td>Rogue</td>
+                <td>6</td>
+                <td><img class="editparty"
+                         src="assets/edit.svg"></td>
+                <td><img class="deleteparty"
+                         src="assets/remove.svg"></td>
+            </tr>
+            <tr>
+                <td>Gandalf</td>
+                <td>Gray Wizard</td>
+                <td>11</td>
+                <td><img class="editparty"
+                         src="assets/edit.svg"></td>
+                <td><img class="deleteparty"
+                         src="assets/remove.svg"></td>
+            </tr>
+            <tr>
+                <td>Harry Potter</td>
+                <td>Chosen One</td>
+                <td>6</td>
+                <td><img class="editparty"
+                         src="assets/edit.svg"></td>
+                <td><img class="deleteparty"
+                         src="assets/remove.svg"></td>
+            </tr>
+            <tr>
+                <td>Hermione Granger</td>
+                <td>Paladin</td>
+                <td>7</td>
+                <td><img class="editparty"
+                         src="assets/edit.svg"></td>
+                <td><img class="deleteparty"
+                         src="assets/remove.svg"></td>
+            </tr>
+            <tr>
+                <td>Ivan Tzarevich</td>
+                <td>Fighter</td>
+                <td>12</td>
+                <td><img class="editparty"
+                         src="assets/edit.svg"></td>
+                <td><img class="deleteparty"
+                         src="assets/remove.svg"></td>
+            </tr>
+            <tr>
+                <td>Lord Voldemort</td>
+                <td>Warlock</td>
+                <td>90</td>
+                <td><img class="editparty"
+                         src="assets/edit.svg"></td>
+                <td><img class="deleteparty"
+                         src="assets/remove.svg"></td>
+            </tr>
+            <tr>
+                <td>Ron Weasley</td>
+                <td>Cleric</td>
+                <td>6</td>
+                <td><img class="editparty"
+                         src="assets/edit.svg"></td>
+                <td><img class="deleteparty"
+                         src="assets/remove.svg"></td>
+            </tr>
+            <tr>
+                <td>Sirius Black</td>
+                <td>Animagus</td>
+                <td>25</td>
+                <td><img class="editparty"
+                         src="assets/edit.svg"></td>
+                <td><img class="deleteparty"
+                         src="assets/remove.svg"></td>
+            </tr>
+            <tr>
+                <td>Vassilissa the Beautiful</td>
+                <td>Princess</td>
+                <td>10</td>
+                <td><img class="editparty"
+                         src="assets/edit.svg"></td>
+                <td><img class="deleteparty"
+                         src="assets/remove.svg"></td>
+            </tr>
+        </table>
+        <div class="charactions">
+            <div class="pulsante">New character...</div>
+        </div>
+    </div>
+    <div class="viewparty contentbox">
+        <h1 class="partyname">LOTR</h1>
+        <div class="partymembers">
+            <h2>Party members:</h2>
+            <ul>
+                <li class="selected"><span>Aragorn (Ranger, lv.12)</span><img class="deleteparty"
+                                                                              src="assets/remove.svg"></li>
+                <li><span>Frodo Baggins (Rogue, lv.6)</span></li>
+                <li><span>Gandalf (Gray Wizard, lv.11)</span></li>
+            </ul>
+        </div>
+        <div class="partyedit">
+            <h2>Add member:</h2>
+            <form class="addchar">
+                <select name="add_character">
+                    <option value="id1">Character 1</option>
+                    <option value="id2">Character 2</option>
+                    <option value="id3">Character 3</option>
+                </select>
+                <button type="submit">Add</button>
+            </form>
+            <div class="membersactions">
+                <div class="pulsante">Add new...</div>
+            </div>
+        </div>
+        <div class="chardesc">
+            <h3>Aragorn</h3>
+            <p>Aragorn II, soprannominato Grampasso o Passolungo in italiano
+                (Strider in originale), salito al trono come Elessar Telcontar,
+                è un personaggio di Arda, l'universo
+                immaginario fantasy creato dallo scrittore inglese J. R. R. Tolkien. </p>
+            <p>È uno dei protagonisti de Il Signore degli Anelli e compare anche
+                nel Silmarillion.</p>
+            <p>Essendo l'ultimo discendente diretto di Elendil e Isildur (precisamente
+                il trentanovesimo),era di
+                diritto l'erede al trono di Gondor.
+                Dopo aver passato i primi anni di vita in esilio,
+                combatte per la guerra dell'Anello e alla fine di questa,
+                nell'anno 3021 T.E. viene incoronato re di Gondor e di Arnor.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="glasspane">
+    <div class="modal addparty">
+        <h2 class="modaltitle">Create New Party</h2>
+        <form class="modalform">
+            <div class="v_formgroup name">
+                <label for="name">Name</label>
+                <input type="text"
+                       id="name"
+                       name="party_name">
+            </div>
+            <div class="v_formgroup shortname">
+                <label for="shortname">Shortname: only lowcase [a-z], hyphen (-) and underscore (_) allowed</label>
+                <input type="text"
+                       id="shortname"
+                       name="party_shortname">
+            </div>
+            <div class="formaction">
+                <button type="submit">Create</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

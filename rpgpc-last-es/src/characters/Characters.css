@@ -1,0 +1,17 @@
+.charactions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.characters {
+    grid-area: characters;
+    margin-bottom: 10px;
+}
+
+.chartable tr td img {
+    max-width: 12px;
+    width: 12px;
+    height: 12px;
+    max-height: 12px;
+    margin-left: 0px;
+}

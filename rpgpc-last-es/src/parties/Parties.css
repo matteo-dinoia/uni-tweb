@@ -1,0 +1,22 @@
+.parties {
+    grid-area: parties;
+    margin-bottom: 10px;
+}
+
+.parties li img {
+    max-width: 16px;
+    width: 16px;
+    height: 16px;
+    max-height: 16px;
+    margin-left: 10px;
+}
+
+.parties li span {
+    flex-grow: 1
+}
+
+
+.partiesactions {
+    display: flex;
+    justify-content: flex-end;
+}

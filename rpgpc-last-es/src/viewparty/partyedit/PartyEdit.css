@@ -1,0 +1,26 @@
+.partyedit {
+    grid-area: partyedit;
+}
+
+.partyedit .addchar {
+    display: flex;
+    padding: 10px 0;
+
+}
+
+.partyedit select {
+    font-size: 1rem;
+    padding: 10px 10px;
+    border-radius: 8px;
+    margin-right: 10px;
+    flex-grow: 1;
+}
+
+.partyedit .membersactions {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.partyedit .membersactions a {
+    text-decoration: none;
+}

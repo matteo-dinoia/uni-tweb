@@ -1,0 +1,42 @@
+.modal.addchar {
+    width: 60vw;
+    height: 80vh;
+}
+
+
+div.addchar .modalform {
+    flex-grow: 1;
+    display: grid;
+    grid-template-rows: 40px 40px auto 50px;
+    grid-template-columns: 4fr 1fr;
+}
+
+.modalform .name {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.modalform .rpgclass {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-right: 30px;
+}
+
+.modalform .level {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.modalform .desc {
+    margin-top: 20px;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}

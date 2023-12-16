@@ -1,0 +1,237 @@
+html {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    font-size: 11pt;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    font-size: 11pt;
+    flex-grow: 1;
+}
+
+div#root {
+    flex-grow: 1;
+    margin: 0;
+    display: grid;
+    height: 100vh;
+    max-height: 100vh;
+    grid-template-rows: 80px 3fr 6fr;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+            "topbar topbar"
+            "parties viewparty"
+            "characters viewparty";
+}
+
+.sidebox {
+    border: 2px solid #6C6C6C;
+    border-radius: 25px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebox > h2 {
+    color: #3B0E7B;
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.sidebox > ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.sidebox > ul > li {
+    display: flex;
+    padding: 10px;
+    background-color: #EBE1FC;
+    margin-bottom: 5px;
+    border: 1px solid #BBBBBB;
+}
+
+.sidebox > ul > li:last-child {
+    margin-bottom: 0;
+}
+
+.sidebox > ul > li:hover {
+    background-color: #CDE0F6;
+}
+
+.sidebox > ul > li.selected, .sidebox > ul > li.selected:hover {
+    background-color: #9BE8EA;
+    border: 1px solid #70BABC;
+}
+
+
+.sidebox table {
+    margin-top: 10px;
+    border-spacing: 0;
+    border: 1px solid #3B0E7B;
+    margin-bottom: 10px;
+}
+
+.sidebox th {
+    padding: 5px;
+    font-size: 1rem;
+    border-bottom: 1px solid #3B0E7B;
+}
+
+.sidebox td {
+    font-size: 0.8em;
+    padding: 3px;
+    border-bottom: 1px solid #3B0E7B;
+}
+
+.sidebox tr:last-child td {
+    font-size: 0.9em;
+    padding: 3px;
+    border-bottom: none;
+}
+
+.sidebox tr {
+}
+
+.sidebox tr:nth-child(even) {
+    background-color: #EEFEFF;
+}
+
+.sidebox tr:hover {
+    background-color: #E8F7C3;
+}
+
+.sidebox tr.header {
+    background-color: #EBE1FC;
+    color: #361176;
+    text-align: left;
+}
+
+
+.contentbox {
+    background-color: #C9E5E5;
+    margin-right: 20px;
+    margin-left: 10px;
+    border: 1px solid #BBBBBB;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: auto 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-areas:
+        "partyname partyname"
+        "partymembers chardesc"
+        "partyedit chardesc";
+}
+.contentbox h2 {
+    font-size: 1.3rem;
+    flex-grow: 0;
+    color: #215476;
+    margin: 0;
+}
+
+.pulsante, button {
+    background-color: #EFEFEF;
+    border-radius: 8px;
+    padding: 10px 20px;
+    flex-grow: 0;
+    border: none;
+    font-size: 11pt;
+}
+
+.pulsante:hover, button:hover {
+    background-color: #E8FE93;
+}
+
+.pulsante.alert {
+    background-color: #C70000;
+    color: white;
+}
+
+.pulsante.alert:hover {
+    background-color: #EA3323;
+}
+
+.glasspane {
+    position: absolute;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.23);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.modal .error {
+    color: red;
+    margin: 0;
+}
+
+
+.modaltitle {
+    color: #3B0E7B;
+    margin: 0;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+
+.modalform label {
+    color: #3B0E7B;
+    font-size: 1.2rem;
+}
+
+.modalform input[type=text], .modalform input[type=number], .modalform textarea {
+    background-color: #f6f4ff;
+    font-size: 1.2rem;
+    border: 1px solid  #3B0E7B;
+    padding: 5px;
+}
+
+.modalform .h_formgroup {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: baseline;
+}
+
+.modalform .h_formgroup > input {
+    flex-grow: 1;
+}
+
+.v_formgroup {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    align-items: flex-start;
+}
+
+
+.v_formgroup > textarea {
+    flex-grow: 1;
+    align-self: stretch;
+}
+
+.formaction {
+    display: flex;
+    padding-top: 10px;
+}
+
+

@@ -1,0 +1,38 @@
+.topbar {
+    grid-area: topbar;
+    background-color: #EEFEC7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 20px;
+    color: #4A7D7E;
+    margin-bottom: 10px;
+}
+
+.topbar h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.topmenu {
+    display: flex;
+}
+
+.topmenu > div {
+    background-color: #AFCAC6;
+    border-radius: 5px;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topmenu > div > img {
+    max-width: 24px;
+    width: 24px;
+    height: 24px;
+    max-height: 24px;
+}
